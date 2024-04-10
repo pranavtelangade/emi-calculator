@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EMI Calculator</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Personal Loan EMI Calculator</h1>
+      <div class="wrapper">
+        <div class="sliders">
+          <div class="loan_amount">
+            <div class="amount_title">
+              <p id="loan_amount">Loan amount</p>
+              <div class="inputamount">
+                <span>₹</span>
+                <div class="line"></div>
+                <input
+                  type="text"
+                  name="loanamount"
+                  id="loan_amount_input"
+                  class="inputamount_input"
+                />
+              </div>
+            </div>
+            <input
+              type="text"
+              class="js-range-slider-one slider"
+              name="my_range"
+              value=""
+            />
+          </div>
+          <div class="loan_duration">
+            <div class="amount_title">
+              <p id="loan_duration">Loan duration</p>
+              <div class="inputduration">
+                <input
+                  type="text"
+                  name="loanduration"
+                  id="loan_duration_input"
+                  class="inputamount_input"
+                />
+                <div class="duration_type">
+                  <p id="year" class="selected">Yr</p>
+                  <p id="month">Mo</p>
+                </div>
+              </div>
+            </div>
+            <input
+              type="text"
+              class="js-range-slider-two slider"
+              name="my_range"
+              value=""
+            />
+          </div>
+          <div class="loan_rate">
+            <div class="amount_title">
+              <p>Rate of interest</p>
+              <div class="rateinput">
+                <input
+                  type="text"
+                  name="loanrate"
+                  id="loan_rate_input"
+                  class="inputamount_input"
+                />
+                <div class="line"></div>
+                <span>%</span>
+              </div>
+            </div>
+            <input
+              type="text"
+              class="js-range-slider-three slider"
+              name="my_range"
+              value=""
+            />
+          </div>
+        </div>
+        <div class="values">
+          <div class="emi_amount">
+            <p>Monthly EMI</p>
+            <h2 id="monthly_emi"></h2>
+          </div>
+          <div class="chart_container">
+            <div class="chart">
+              <canvas id="myChart"></canvas>
+            </div>
+            <div class="labels">
+              <div class="total_amount">
+                <div class="blue_label"></div>
+                <div class="total_amount_dymanic">
+                  <p>Total Amount Payable</p>
+                  <p id="total_amount_dynamic"></p>
+                </div>
+              </div>
+              <div class="total_interest">
+                <div class="yellow_label"></div>
+                <div class="total_interest_dymanic">
+                  <p>Total Interest Payable</p>
+                  <p id="total_interest_dynamic"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="applynow">
+            <p>Apply Now</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
